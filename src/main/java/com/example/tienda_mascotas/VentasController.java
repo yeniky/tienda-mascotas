@@ -37,12 +37,12 @@ public class VentasController {
 
 //La suma de todas las ventas
     @GetMapping("/ventas/ganancias/total")
-    public Ganancia gananciasTotal() {
+    public Ganancia_actual gananciasTotal() {
         int total = 0;
         for (Venta v : ventas) {
             total += v.getTotal();
         }
-        return new Ganancia(total, ventas.size());
+        return new Ganancia_actual(total, ventas.size());
     }
 
 
