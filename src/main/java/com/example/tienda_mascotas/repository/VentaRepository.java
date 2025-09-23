@@ -7,7 +7,7 @@ import java.time.LocalDate;
 
 public interface VentaRepository extends JpaRepository<Venta, Long> {
 
-    // Consulta personalizada: suma de total entre dos fechas
+    // suma de total entre dos fechas
     @Query("SELECT COALESCE(SUM(v.total),0) FROM Venta v WHERE v.fecha BETWEEN :desde AND :hasta")
     long sumaTotalEntre(LocalDate desde, LocalDate hasta);
 }

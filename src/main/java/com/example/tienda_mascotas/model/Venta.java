@@ -1,15 +1,15 @@
 package com.example.tienda_mascotas.model;
 
-import jakarta.persistence.*;              // Para @Entity, @Id, @Column...
-import jakarta.validation.constraints.*; // Para @NotNull, @Size, @Min...
+import jakarta.persistence.*;             
+import jakarta.validation.constraints.*; 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "VENTAS") // Nombre de la tabla en Oracle
+@Table(name = "VENTAS") // tabla en Oracle
 public class Venta {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Autonumérico en Oracle
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
 
     @NotNull(message = "La fecha no puede ser nula")
